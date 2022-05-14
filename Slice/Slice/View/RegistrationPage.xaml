@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Slice.View.RegistrationPage"
+             NavigationPage.HasNavigationBar="False"
+             Visual="Material">
+    <StackLayout VerticalOptions="CenterAndExpand">
+        <Entry x:Name="entFullName" Placeholder="ФИО"/>
+        <Entry x:Name="entLogin" Placeholder="Логин"/>
+        <Entry x:Name="entPassword" Placeholder="Пароль" IsPassword="True"/>
+        <Button Text="Зарегистрироваться" Clicked="btnRegistration_Clicked" HorizontalOptions="End"/>
+    </StackLayout>
+</ContentPage>

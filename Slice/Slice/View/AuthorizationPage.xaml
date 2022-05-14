@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Slice.View.AuthorizationPage"
+             NavigationPage.HasNavigationBar="False"
+             Visual="Material">
+    <StackLayout VerticalOptions="CenterAndExpand">
+        <StackLayout Spacing="50">
+            <Entry x:Name="entLogin" Placeholder="Логин"/>
+            <Entry x:Name="entPassword" Placeholder="Пароль" IsPassword="True"/>
+            <Label Text="Нет аккаунта">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="btnRegistation_Tapped"/>
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+            <Button Text="Войти" Clicked="btnLogin_Clicked"  HorizontalOptions="End"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
