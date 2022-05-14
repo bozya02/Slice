@@ -14,11 +14,12 @@ namespace Slice.View
     public partial class DogsListPage : ContentPage
     {
         public List<Dog> Dogs { get; set; }
+        public User User { get; set; }
         public DogsListPage(User user)
         {
             InitializeComponent();
             Dogs = App.Database.GetDogs(user.Id);
-
+            User = user;
             this.BindingContext = this;
         }
 
@@ -30,7 +31,7 @@ namespace Slice.View
         private async void lwDogs_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             Dog dog = lwDogs.SelectedItem as Dog;
-            await Navigation.PushAsync(new DogPage(dog));
+            await Navigation.PushAsync(new DogPage(dog, User));
         }
     }
 }

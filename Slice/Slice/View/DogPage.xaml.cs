@@ -14,11 +14,14 @@ namespace Slice.View
     public partial class DogPage : ContentPage
     {
         public Dog Dog { get; set; }
-        public DogPage(Dog dog)
+        public DogPage(Dog dog, User user = null)
         {
             InitializeComponent();
             Dog = dog;
+            Dog.UserId = user.Id;
             this.BindingContext = this;
+
+            dpBirthday.MinimumDate = DateTime.Now;
         }
 
         private async void btnSave_Clicked(object sender, EventArgs e)
