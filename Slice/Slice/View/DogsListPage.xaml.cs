@@ -25,7 +25,7 @@ namespace Slice.View
 
         private async void tbAddDog_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new DogPage(new Dog()));
+            await Navigation.PushAsync(new DogPage(new Dog(), new User()));
         }
 
         private async void lwDogs_ItemSelected(object sender, SelectedItemChangedEventArgs e)

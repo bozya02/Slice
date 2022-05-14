@@ -14,7 +14,7 @@ namespace Slice.View
     public partial class DogPage : ContentPage
     {
         public Dog Dog { get; set; }
-        public DogPage(Dog dog, User user = null)
+        public DogPage(Dog dog, User user)
         {
             InitializeComponent();
             Dog = dog;
